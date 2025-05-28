@@ -35,8 +35,7 @@ public class CoffeeMachine {
             throw new RuntimeException("Coffee capsule is ");
         }
         var requiredCapsuleQuantity = coffeeCapsule.get(type);
-        int requiredCapsules = (int) Math.ceil(quantity);
-        if (requiredCapsules > requiredCapsuleQuantity) {
+        if (quantity > requiredCapsuleQuantity) {
             throw new RuntimeException("Coffee capsule is enough");
         }
         waterBalance -= quantity;
